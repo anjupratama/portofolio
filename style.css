@@ -1,113 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem;
-    animation: fadeIn 1s ease-in;
-  }
-  
-  .profile {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
+  font-family: 'Inter', sans-serif;
+  color: #fff;
   padding: 1rem;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.profile {
+  display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
-  
-  .profile-pic {
-  width: 160px;
-    height: 160px;
-    border-radius: 999px;
-    object-fit: cover;
-    box-shadow: 0 0 80px rgba(255, 0, 0, 0.2);
-    
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
-  
- .profile-text {
-  flex: 1;
-}
-  .profile-text h1 {
+
+.profile-text h1 {
   font-size: 2rem;
-  margin-bottom: 0.2rem;
 }
 
 .profile-text .role {
   font-size: 1.2rem;
   color: #ccc;
-  margin-bottom: 0.5rem;
+  margin: 0.4rem 0;
 }
 
 .profile-text .desc {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 0.8rem;
-}
-
-.profile-text .contact {
-  font-size: 0.95rem;
-  line-height: 1.4;
+  margin-bottom: 0.5rem;
 }
 
 .profile-text .contact a {
-  color: #ec4899;
+  color: #00bfff;
   text-decoration: none;
 }
 
 .profile-text .contact a:hover {
   text-decoration: underline;
 }
-  .role {
-    font-size: 1.2rem;
-    color: #ccc;
-  }
-  
-  .desc {
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
-  }
-  
-  .contact {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    color: #bbb;
-  }
-  
-  .card {
-    background: #111;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
-    margin-bottom: 1.5rem;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    
-  }
-  
-  .card h2 {
-    margin-top: 0;
-    color: #0ff;
-  }
-  
-  .card ul {
-    padding-left: 1.2rem;
-  }
-  
-  .card a {
-    color: #0af;
-    text-decoration: underline;
-  }
+
+section {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+h2 {
+  color: #00eaff;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
 
 footer {
   text-align: center;
   padding: 1rem 0;
+  color: #aaa;
   font-size: 0.9rem;
-  color: #fff;
-  background-color: transparent; /* atau sesuaikan warna footer */
 }
-  
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Toggle Switch */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #888;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Light mode overrides */
+body.light {
+  background: linear-gradient(120deg, #f8f8f8, #ffffff);
+  color: #111;
+}
+
+body.light section {
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+body.light h2 {
+  color: #007acc;
+}
+
+body.light footer {
+  color: #444;
+}
+
+body.light a {
+  color: #007acc;
+}
