@@ -13,29 +13,54 @@ body {
   }
   
   .profile {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2rem;
-    animation: forwards;
-  }
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
   
   .profile-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 999px;
-    object-fit: cover;
-    box-shadow: 0 0 80px rgba(255, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    
-    
-  }
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
   
-  .profile-pic:hover {
-    transform: scale(1.05);
-    transition: cubic-bezier(2);
-  }
-  
+ .profile-text {
+  flex: 1;
+}
+  .profile-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.profile-text .role {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.profile-text .desc {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.profile-text .contact {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.profile-text .contact a {
+  color: #ec4899;
+  text-decoration: none;
+}
+
+.profile-text .contact a:hover {
+  text-decoration: underline;
+}
   .role {
     font-size: 1.2rem;
     color: #ccc;
