@@ -122,4 +122,43 @@ footer {
   text-align: center;
   color: #fff;
   font-family: 'Poppins', sans-serif;
+} 
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile {
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .role, .desc, .contact {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
 }
+
