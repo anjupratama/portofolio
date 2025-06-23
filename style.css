@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .profile {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    animation: forwards;
+  }
+  
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 999px;
+    object-fit: cover;
+    box-shadow: 0 0 80px rgba(255, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    
+    
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.05);
+    transition: cubic-bezier(2);
+  }
+  
+  .role {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .desc {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+  
+  .contact {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #bbb;
+  }
+  
+  .card {
+    background: #111;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: #0ff;
+  }
+  
+  .card ul {
+    padding-left: 1.2rem;
+  }
+  
+  .card a {
+    color: #0af;
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-up {
+    animation: fadeInUp 0.7s ease-out;
+  }
+  
+  .card ul li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .card ul li i {
+    margin-right: 8px;
+    color: #0ff;
+  }
+
+  .card a {
+    color: #0ff; /* warna khas WhatsApp */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .card a i {
+    margin-right: 8px;
+  }
+
+  .card p i {
+    margin-right: 6px;
+    color: #0ff; /* Sesuaikan warna ikon */
+  }
