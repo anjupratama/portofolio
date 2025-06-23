@@ -124,4 +124,45 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .profile h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .profile .role {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: -5px;
+  }
+
+  .profile .desc {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .contact {
+    font-size: 0.95rem;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
 
